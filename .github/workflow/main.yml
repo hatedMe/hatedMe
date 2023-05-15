@@ -1,0 +1,13 @@
+name: main
+
+on: [push]
+
+jobs:
+  test :
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@master
+        id: snake-gif
+        with:
+          github_user_name: ${{ github.actor }}
+          svg_out_path: dist/github-contribution-grid-snake.svg
